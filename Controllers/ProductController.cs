@@ -39,6 +39,7 @@ namespace WebApplicationDemo.Controllers
         }
 
         [HttpDelete]
+        [Route("{id}")]
         public Task<String>  DeleteProduct(long id)
         {
             return  _productManager.DeleteProductsAsync(id);
