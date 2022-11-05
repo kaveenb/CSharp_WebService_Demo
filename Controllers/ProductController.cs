@@ -46,6 +46,7 @@ namespace WebApplicationDemo.Controllers
         }
 
         [HttpPut]
+        [Route("{id}")]
         public  Task<ProductEntity> UpdateProduct(long id,ProductEntity productEntity)
         {
               return _productManager.UpdateProductsAsync(id,productEntity);;

@@ -28,20 +28,17 @@ namespace WebApplicationDemo.BL
 
         public async Task<ProductEntity> UpdateProductsAsync(long id, ProductEntity productEntity)
         {
-             await _productDa.UpdateProductAsync(id, productEntity);
-              return  productEntity;
+            return await _productDa.UpdateProductAsync(id, productEntity);
         }
 
         public async Task<string> DeleteProductsAsync(long id)
         {
-              return await _productDa.DeleteProductAsync(id);
-             
+            return await _productDa.DeleteProductAsync(id);
         }
 
         public async Task<ProductEntity> AddProductsAsync(ProductEntity productEntity)
         {
-              await _productDa.AddProductAsync(productEntity);
-              return productEntity;
+            return await _productDa.AddProductAsync(productEntity);
         }
      
     

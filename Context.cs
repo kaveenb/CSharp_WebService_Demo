@@ -15,9 +15,12 @@ namespace WebApplicationDemo
 
         public DbSet<ProductEntity> Product { get; set; }
 
+        public DbSet<UserEntity> User { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             new ProductMap(modelBuilder.Entity<ProductEntity>());
+            new UserMap(modelBuilder.Entity<UserEntity>());
         }
     }
 }

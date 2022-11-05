@@ -57,6 +57,8 @@ namespace WebApplicationDemo
             });
             services.AddScoped<IProductDA,ProductDA>();
             services.AddScoped<IProductManager, ProductManager>();
+             services.AddScoped<IUserDA,UserDA>();
+            services.AddScoped<IUserManager, UserManager>();
             services.AddCors();
         }
 
