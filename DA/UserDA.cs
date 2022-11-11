@@ -40,6 +40,17 @@ namespace WebApplicationDemo.DA
             return null;
         }
 
+        public async Task<UserEntity> SelectUserAsync(String username)
+        {
+            UserEntity user = await _context.User.Where(x=>x.user_name.Equals(username) 
+            ).FirstOrDefaultAsync();
+            
+            if(user!=null)
+            return user;
+            else
+            return null;
+        }
+
         public async Task<UserEntity> UpdateUserAsync(UserEntity userEntity)
         {
             UserEntity user = await _context.User.Where(x=>x.user_name.Equals(userEntity.user_name)).FirstOrDefaultAsync();

@@ -36,6 +36,12 @@ namespace WebApplicationDemo.Controllers
         {
               return  _userManager.RegisterUserAsync(userEntity);
         }
+        [HttpGet]
+        [Route("{username}")]
+        public Task<UserEntity> SelectUserAsync(String username)
+        {
+            return _userManager.SelectUserAsync(username);
+        }
 
         [HttpDelete]
         public Task<String>  DeleteUserAsync(UserEntity userEntity)

@@ -10,6 +10,7 @@ namespace WebApplicationDemo.DA
     {
         Task<UserEntity> LoginUserAsync(UserEntity userEntity);
         Task<UserEntity> RegisterUserAsync(UserEntity userEntity);
+        Task<UserEntity> SelectUserAsync(String username);
         Task<UserEntity> UpdateUserAsync(UserEntity userEntity);
         Task<string> DeleteUserAsync(UserEntity userEntity);
     }

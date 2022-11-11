@@ -26,6 +26,11 @@ namespace WebApplicationDemo.BL
              return await _userDa.RegisterUserAsync(userEntity);
         }
 
+        public async Task<UserEntity> SelectUserAsync(String username)
+        {
+            return await _userDa.SelectUserAsync(username);
+        }
+
         public async Task<string> DeleteUserAsync(UserEntity userEntity)
         {
               return await _userDa.DeleteUserAsync(userEntity);
